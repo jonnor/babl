@@ -1,0 +1,10 @@
+language: c
+before_install:
+- sudo apt-get update -qq
+- sudo apt-get build-dep babl
+- sudo apt-get install w3m
+script:
+- ./autogen.sh --prefix=/opt/babl
+- make check
+- make distcheck
+
